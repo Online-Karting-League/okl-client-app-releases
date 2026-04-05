@@ -12,6 +12,6 @@ jobs:
       - run: echo ${{ toJson(github.event.release) }}
       - uses: "Ilshidur/action-discord@0.4.0"
         with:
-          args: "OKL Launcher v${{ github.event.release.tag_name }} - [Download](${{ github.event.release.html_url }})"
+          args: "OKL Launcher ${{ github.event.release.tag_name }} - [Download](${{ github.event.release.html_url }})"
         env:
           DISCORD_WEBHOOK: ${{ case(github.event.release.prerelease, secrets.STAGING_DISCORD_WEBHOOK, secrets.PRODUCTION_DISCORD_WEBHOOK) }}
