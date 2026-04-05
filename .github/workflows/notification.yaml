@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo ${{ toJson(github.event.release) }}
       - uses: "Ilshidur/action-discord@0.4.0"
         with:
           args: "OKL Launcher ${{ github.event.release.tag_name }} - [Download](${{ github.event.release.html_url }})"
