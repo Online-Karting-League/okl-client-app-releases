@@ -14,3 +14,6 @@ jobs:
           args: "OKL Launcher ${{ github.event.release.tag_name }} - [Download](${{ github.event.release.html_url }})"
         env:
           DISCORD_WEBHOOK: ${{ case(github.event.release.prerelease, secrets.STAGING_DISCORD_WEBHOOK, secrets.PRODUCTION_DISCORD_WEBHOOK) }}
+          DISCORD_USERNAME: "OKL Releases"
+          DISCORD_AVATAR: "https://cdn.discordapp.com/app-icons/1466443585036750973/33f4b5832c93da5d17370bfbab972bfd.png?size=256"
+          DISCORD_AVATAR_URL: "https://raw.githubusercontent.com/okl-launcher/okl-system/main/apps/connect/public/icon.png"
